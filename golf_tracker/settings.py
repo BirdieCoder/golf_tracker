@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6gqjs(y@@o)2@kh3*#pj45kw5i_zaau9$jz%=nmpus3*y70k*u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["157.230.239.231","localhost","127.0.0.1","thetruthgolf.com","www.thetruthgolf.com"]
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'golf_tracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'golf_tracker',
+	'USER': 'golfuser',
+	'PASSWORD': 'strongpassword',
+	'HOST': 'localhost',
+	'PORT': '5432',
     }
 }
 
